@@ -3,7 +3,7 @@ public class Car extends Actor
 {
     public void act()
     {
-       move (-10);
+       move (-5);
        
        if (getX() <= 0){
            resetCar();
