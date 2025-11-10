@@ -3,10 +3,17 @@ public class Car extends Actor
 {
     public void act()
     {
-       move (-20);
+       move (-10);
        
        if (getX() <= 0){
            resetCar();
+       }
+       
+       if (isTouching(Hero.class))
+       {
+           Skull skull = new Skull();
+           getWorld().addObject(skull, 300, 200);
+           getWorld().removeObject(this);
        }
     }
     
